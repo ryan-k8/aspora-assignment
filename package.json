@@ -14,9 +14,13 @@
   "author": "github/ryan-k8",
   "license": "ISC",
   "type": "commonjs",
+  "_moduleAliases": {
+    "@": "dist"
+  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
+    "module-alias": "^2.2.3",
     "morgan": "^1.10.1",
     "ngeohash": "^0.6.3",
     "openmeteo": "^1.2.3"
