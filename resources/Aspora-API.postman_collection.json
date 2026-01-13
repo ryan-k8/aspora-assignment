@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "bc5e5c3b-0411-4732-ae84-96386e652532",
+		"name": "Aspora-API",
+		"description": "postman collection for the take home assignment given by aspora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32205659"
+	},
+	"item": [
+		{
+			"name": "health-check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"description": "**endpoint for health check**"
+			},
+			"response": []
+		},
+		{
+			"name": "commute-advice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"home\": { \"latitude\": 40.7128, \"longitude\": -74 }, \n  \"office\": { \"latitude\": 37.777, \"longitude\": -122 },\n  \"plannedDeparture\": \"2026-01-15T07:00:00Z\",\n  \"commuteDuration\": 40\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_url}}/commute-advice",
+				"description": "main endpoint for getting commute advice"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http:/localhost:8080"
+		}
+	]
+}
